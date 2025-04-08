@@ -1,0 +1,11 @@
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/uninstall.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/topic_ex_c_uninstall.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/topic_pub.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/topic_sub.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/test.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/edit_cache.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/rebuild_cache.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/list_install_components.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/install.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/install/local.dir
+/home/kdg/kdg/build/topic_ex_c/CMakeFiles/install/strip.dir

@@ -1,0 +1,21 @@
+[0.028s] Invoking command in '/home/kdg/kdg/build/wanderbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kdg/kdg/build/wanderbot -- -j16 -l16
+[0.082s] [35m[1mConsolidate compiler generated dependencies of target go_scan[0m
+[0.104s] [ 50%] Built target go_rot
+[0.111s] [ 75%] [32mBuilding CXX object CMakeFiles/go_scan.dir/src/go_scan.cpp.o[0m
+[2.231s] [01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:78:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfloat[m[K’
+[2.232s]    78 |             [01;31m[Kfloat[m[K range_right_array[15];
+[2.232s]       |             [01;31m[K^~~~~[m[K
+[2.253s] [01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:[m[K In member function ‘[01m[Kvoid GoScan::timer_cb()[m[K’:
+[2.254s] [01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:34:21:[m[K [01;31m[Kerror: [m[K‘[01m[Krange_right_array[m[K’ was not declared in this scope; did you mean ‘[01m[Krange_left_array[m[K’?
+[2.254s]    34 |                 if ([01;31m[Krange_right_array[m[K[i] < 0.6) {
+[2.254s]       |                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.254s]       |                     [32m[Krange_left_array[m[K
+[2.261s] [01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:[m[K In member function ‘[01m[Kvoid GoScan::scan_cb(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.261s] [01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:60:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krange_right_array[m[K’ was not declared in this scope; did you mean ‘[01m[Krange_left_array[m[K’?
+[2.261s]    60 |                 [01;31m[Krange_right_array[m[K[i] = msg->ranges[i];
+[2.261s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.261s]       |                 [32m[Krange_left_array[m[K
+[4.227s] gmake[2]: *** [CMakeFiles/go_scan.dir/build.make:76: CMakeFiles/go_scan.dir/src/go_scan.cpp.o] Error 1
+[4.228s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/go_scan.dir/all] Error 2
+[4.228s] gmake: *** [Makefile:146: all] Error 2
+[4.230s] Invoked command in '/home/kdg/kdg/build/wanderbot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kdg/kdg/build/wanderbot -- -j16 -l16

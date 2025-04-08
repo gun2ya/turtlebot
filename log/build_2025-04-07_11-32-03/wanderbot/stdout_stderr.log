@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target go_scan[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/go_scan.dir/src/go_scan.cpp.o[0m
+[ 75%] Built target go_rot
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:78:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfloat[m[K’
+   78 |             [01;31m[Kfloat[m[K range_right_array[15];
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:[m[K In member function ‘[01m[Kvoid GoScan::timer_cb()[m[K’:
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:34:21:[m[K [01;31m[Kerror: [m[K‘[01m[Krange_right_array[m[K’ was not declared in this scope; did you mean ‘[01m[Krange_left_array[m[K’?
+   34 |                 if ([01;31m[Krange_right_array[m[K[i] < 0.6) {
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[Krange_left_array[m[K
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:[m[K In member function ‘[01m[Kvoid GoScan::scan_cb(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:60:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krange_right_array[m[K’ was not declared in this scope; did you mean ‘[01m[Krange_left_array[m[K’?
+   60 |                 [01;31m[Krange_right_array[m[K[i] = msg->ranges[i];
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Krange_left_array[m[K
+gmake[2]: *** [CMakeFiles/go_scan.dir/build.make:76: CMakeFiles/go_scan.dir/src/go_scan.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/go_scan.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,16 @@
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:[m[K In member function ‘[01m[Kvoid GoScan::timer_cb()[m[K’:
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:31:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kelse[m[K’
+   31 |             [01;31m[Kelse[m[K if(range_ahead_ < 0.6 || range_left_ < 0.6)
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:27:56:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   27 |             if(range_left_ < 0.6 || range_right_ < 0.6)[01;36m[K{[m[K
+      |                                                        [01;36m[K^[m[K
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:31:18:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+   31 |             else [01;35m[Kif[m[K(range_ahead_ < 0.6 || range_left_ < 0.6)
+      |                  [01;35m[K^~[m[K
+[01m[K/home/kdg/kdg/src/wanderbot/src/go_scan.cpp:33:17:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+   33 |                 [01;36m[Kcmd[m[K.angular.z = -0.2;
+      |                 [01;36m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/go_scan.dir/build.make:76: CMakeFiles/go_scan.dir/src/go_scan.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/go_scan.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

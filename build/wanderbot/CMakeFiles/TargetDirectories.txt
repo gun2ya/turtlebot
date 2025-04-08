@@ -1,0 +1,11 @@
+/home/kdg/kdg/build/wanderbot/CMakeFiles/uninstall.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/wanderbot_uninstall.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/go_rot.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/go_scan.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/test.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/edit_cache.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/rebuild_cache.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/list_install_components.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/install.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/install/local.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/install/strip.dir

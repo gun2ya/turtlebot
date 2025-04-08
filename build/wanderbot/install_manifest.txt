@@ -1,0 +1,17 @@
+/home/kdg/kdg/install/wanderbot/lib/wanderbot/go_rot
+/home/kdg/kdg/install/wanderbot/lib/wanderbot/go_scan
+/home/kdg/kdg/install/wanderbot/share/ament_index/resource_index/package_run_dependencies/wanderbot
+/home/kdg/kdg/install/wanderbot/share/ament_index/resource_index/parent_prefix_path/wanderbot
+/home/kdg/kdg/install/wanderbot/share/wanderbot/environment/ament_prefix_path.sh
+/home/kdg/kdg/install/wanderbot/share/wanderbot/environment/ament_prefix_path.dsv
+/home/kdg/kdg/install/wanderbot/share/wanderbot/environment/path.sh
+/home/kdg/kdg/install/wanderbot/share/wanderbot/environment/path.dsv
+/home/kdg/kdg/install/wanderbot/share/wanderbot/local_setup.bash
+/home/kdg/kdg/install/wanderbot/share/wanderbot/local_setup.sh
+/home/kdg/kdg/install/wanderbot/share/wanderbot/local_setup.zsh
+/home/kdg/kdg/install/wanderbot/share/wanderbot/local_setup.dsv
+/home/kdg/kdg/install/wanderbot/share/wanderbot/package.dsv
+/home/kdg/kdg/install/wanderbot/share/ament_index/resource_index/packages/wanderbot
+/home/kdg/kdg/install/wanderbot/share/wanderbot/cmake/wanderbotConfig.cmake
+/home/kdg/kdg/install/wanderbot/share/wanderbot/cmake/wanderbotConfig-version.cmake
+/home/kdg/kdg/install/wanderbot/share/wanderbot/package.xml
