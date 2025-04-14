@@ -697,4 +697,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/wanderbot_uninstall.dir/DependInfo.cmake"
   "CMakeFiles/go_rot.dir/DependInfo.cmake"
   "CMakeFiles/go_scan.dir/DependInfo.cmake"
+  "CMakeFiles/go_mission2.dir/DependInfo.cmake"
   )

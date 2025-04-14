@@ -1,5 +1,6 @@
 /home/kdg/kdg/install/wanderbot/lib/wanderbot/go_rot
 /home/kdg/kdg/install/wanderbot/lib/wanderbot/go_scan
+/home/kdg/kdg/install/wanderbot/lib/wanderbot/go_mission2
 /home/kdg/kdg/install/wanderbot/share/ament_index/resource_index/package_run_dependencies/wanderbot
 /home/kdg/kdg/install/wanderbot/share/ament_index/resource_index/parent_prefix_path/wanderbot
 /home/kdg/kdg/install/wanderbot/share/wanderbot/environment/ament_prefix_path.sh

@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/kdg/kdg/build/wanderbot
 # The main recursive "all" target.
 all: CMakeFiles/go_rot.dir/all
 all: CMakeFiles/go_scan.dir/all
+all: CMakeFiles/go_mission2.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/wanderbot_uninstall.dir/clean
 clean: CMakeFiles/go_rot.dir/clean
 clean: CMakeFiles/go_scan.dir/clean
+clean: CMakeFiles/go_mission2.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -137,7 +139,7 @@ CMakeFiles/wanderbot_uninstall.dir/clean:
 CMakeFiles/go_rot.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_rot.dir/build.make CMakeFiles/go_rot.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_rot.dir/build.make CMakeFiles/go_rot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kdg/kdg/build/wanderbot/CMakeFiles --progress-num=1,2 "Built target go_rot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kdg/kdg/build/wanderbot/CMakeFiles --progress-num=3,4 "Built target go_rot"
 .PHONY : CMakeFiles/go_rot.dir/all
 
 # Build rule for subdir invocation for target.
@@ -163,7 +165,7 @@ CMakeFiles/go_rot.dir/clean:
 CMakeFiles/go_scan.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_scan.dir/build.make CMakeFiles/go_scan.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_scan.dir/build.make CMakeFiles/go_scan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kdg/kdg/build/wanderbot/CMakeFiles --progress-num=3,4 "Built target go_scan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kdg/kdg/build/wanderbot/CMakeFiles --progress-num=5,6 "Built target go_scan"
 .PHONY : CMakeFiles/go_scan.dir/all
 
 # Build rule for subdir invocation for target.
@@ -181,6 +183,32 @@ go_scan: CMakeFiles/go_scan.dir/rule
 CMakeFiles/go_scan.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_scan.dir/build.make CMakeFiles/go_scan.dir/clean
 .PHONY : CMakeFiles/go_scan.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/go_mission2.dir
+
+# All Build rule for target.
+CMakeFiles/go_mission2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kdg/kdg/build/wanderbot/CMakeFiles --progress-num=1,2 "Built target go_mission2"
+.PHONY : CMakeFiles/go_mission2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/go_mission2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kdg/kdg/build/wanderbot/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/go_mission2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kdg/kdg/build/wanderbot/CMakeFiles 0
+.PHONY : CMakeFiles/go_mission2.dir/rule
+
+# Convenience name for target.
+go_mission2: CMakeFiles/go_mission2.dir/rule
+.PHONY : go_mission2
+
+# clean rule for target.
+CMakeFiles/go_mission2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/clean
+.PHONY : CMakeFiles/go_mission2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

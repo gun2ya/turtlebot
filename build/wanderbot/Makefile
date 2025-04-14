@@ -223,6 +223,43 @@ go_scan/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_scan.dir/build.make CMakeFiles/go_scan.dir/build
 .PHONY : go_scan/fast
 
+#=============================================================================
+# Target rules for targets named go_mission2
+
+# Build rule for target.
+go_mission2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 go_mission2
+.PHONY : go_mission2
+
+# fast build rule for target.
+go_mission2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/build
+.PHONY : go_mission2/fast
+
+src/go_mission2.o: src/go_mission2.cpp.o
+.PHONY : src/go_mission2.o
+
+# target to build an object file
+src/go_mission2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/src/go_mission2.cpp.o
+.PHONY : src/go_mission2.cpp.o
+
+src/go_mission2.i: src/go_mission2.cpp.i
+.PHONY : src/go_mission2.i
+
+# target to preprocess a source file
+src/go_mission2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/src/go_mission2.cpp.i
+.PHONY : src/go_mission2.cpp.i
+
+src/go_mission2.s: src/go_mission2.cpp.s
+.PHONY : src/go_mission2.s
+
+# target to generate assembly for a file
+src/go_mission2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/go_mission2.dir/build.make CMakeFiles/go_mission2.dir/src/go_mission2.cpp.s
+.PHONY : src/go_mission2.cpp.s
+
 src/go_rot.o: src/go_rot.cpp.o
 .PHONY : src/go_rot.o
 
@@ -286,8 +323,12 @@ help:
 	@echo "... test"
 	@echo "... uninstall"
 	@echo "... wanderbot_uninstall"
+	@echo "... go_mission2"
 	@echo "... go_rot"
 	@echo "... go_scan"
+	@echo "... src/go_mission2.o"
+	@echo "... src/go_mission2.i"
+	@echo "... src/go_mission2.s"
 	@echo "... src/go_rot.o"
 	@echo "... src/go_rot.i"
 	@echo "... src/go_rot.s"

@@ -26,40 +26,69 @@ class GoScan : public rclcpp::Node{
             auto cmd = geometry_msgs::msg::Twist();
             obstacle = false;
             obstacle_left = false;
-            for (int i = 0; i < 27; i++) {
-                printf("obstacle: %d, left: %f\n", i+2, range_left_array[i+2]);
-                if (range_left_array[i+2] < 0.4 && range_left_array[i+2] > 0.001)  {
+            if (!left_wall) {
+                for (int i = 0; i < 10; i++) {
+                printf("obstacle: %d, left: %f\n", i, range_ahead_array[i]);
+                if (range_ahead_array[i] < 0.4 && range_ahead_array[i] > 0.001)  {
                     obstacle = true;
-                    obstacle_left = true;
+                    rotation = true;
                     break;
                 }
             }
-            if (obstacle) {
-                cmd.linear.x = 0.0;
-                cmd.angular.z = 0.2;
-            
-            // printf("obstacle: %d, obstacle_left: %d, obstacle_right: %d\n", obstacle, obstacle_left, obstacle_right);
-            // if (!obstacle) {
-            //     cmd.linear.x = 0.15;
-            //     cmd.angular.z = 0.0;
-            // }
-            // else if (obstacle && obstacle_left) {
-            //     cmd.linear.x = 0.0;
-            //     cmd.angular.z = 0.2;
-
-            // } 
-            // else if (obstacle && obstacle_right) {
-            //     cmd.linear.x = 0.0;
-            //     cmd.angular.z = -0.2;
-            // }   
-
+                if (!obstacle && !rotation) {
+                    rotation_count = 0;
+                    cmd.linear.x = 0.2;
+                    cmd.angular.z = 0.0;
+                }
+                else if (rotation && rotation_count < 80) {
+                    cmd.linear.x = 0.0;
+                    cmd.angular.z = -0.2;
+                    rotation_count++;
+                }
+                if (rotation && rotation_count >= 80) {
+                    rotation = false;
+                    left_wall = true;
+                    rotation_count = 0;
+                    cmd.linear.x = 0.2;
+                    cmd.angular.z = 0.0;
+                }
+                printf("rotation_count: %d\n", rotation_count);
+            } else {
+                
+                for(int i=0; i<30; i++) {
+                    printf("left: %f\n", range_left_array[i]);
+                    if (range_left_array[i] < 0.4 && range_left_array[i] > 0.001) {
+                        obstacle_left = true;
+                        break;
+                    }
+                }
+                if (obstacle_left && rotation_count == 0) {
+                    cmd.linear.x = 0.2;
+                    cmd.angular.z = 0.0;
+                }
+                else if (rotation_count < 80) {
+                    cmd.linear.x = 0.0;
+                    cmd.angular.z = 0.2;
+                    rotation_count++;
+                }
+                else {
+                    rotation = false;
+                    left_wall = false;
+                    rotation_count = 0;
+                    cmd.linear.x = 0.2;
+                    cmd.angular.z = 0.0;
+                }
+            }
             pub_->publish(cmd);
         }
 
         void scan_cb(const sensor_msgs::msg::LaserScan::SharedPtr msg) {
+            for(int i = 0; i < 5; i++) {
+                range_ahead_array[i] = msg->ranges[i];
+                range_ahead_array[5+i] = msg->ranges[360-i-1];
+            }
             for(int i = 0; i < 30; i++) {
-                range_right_array[i] = msg->ranges[i];
-                range_left_array[i] = msg->ranges[360-i-1];
+                range_left_array[i] = msg->ranges[i+90];
             }
             range_ahead_ = msg->ranges[0];
             range_left_ = msg->ranges[10];
@@ -78,7 +107,10 @@ class GoScan : public rclcpp::Node{
         bool obstacle_right = false;
         bool obstacle = false;
 	    float range_left_array[30];
-        float range_ahead_array[360];
+        float range_ahead_array[10];
+
+        bool rotation = false;
+        bool left_wall = false;
         int rotation_count = 0;
 
 };

@@ -1,0 +1,24 @@
+# Mac
+.DS_Store
+
+# ROS
+build/
+devel/
+install/
+log/
+
+# ROS2
+.ros/
+.venv/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+# C++
+*.o
+*.a
+*.so
+*.dylib

@@ -2,6 +2,7 @@
 /home/kdg/kdg/build/wanderbot/CMakeFiles/wanderbot_uninstall.dir
 /home/kdg/kdg/build/wanderbot/CMakeFiles/go_rot.dir
 /home/kdg/kdg/build/wanderbot/CMakeFiles/go_scan.dir
+/home/kdg/kdg/build/wanderbot/CMakeFiles/go_mission2.dir
 /home/kdg/kdg/build/wanderbot/CMakeFiles/test.dir
 /home/kdg/kdg/build/wanderbot/CMakeFiles/edit_cache.dir
 /home/kdg/kdg/build/wanderbot/CMakeFiles/rebuild_cache.dir

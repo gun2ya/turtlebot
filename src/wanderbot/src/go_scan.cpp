@@ -27,7 +27,6 @@ class GoScan : public rclcpp::Node{
             obstacle = false;
             obstacle_left = false;
             obstacle_right = false;
-            
             for (int i = 0; i < 27; i++) {
                 printf("obstacle: %d, left: %f, right: %f\n", i+2, range_left_array[i+2], range_right_array[i+2]);
                 if (range_left_array[i+2] < 0.4 && range_left_array[i+2] > 0.001)  {
@@ -42,29 +41,18 @@ class GoScan : public rclcpp::Node{
                 }
             }
             printf("obstacle: %d, obstacle_left: %d, obstacle_right: %d\n", obstacle, obstacle_left, obstacle_right);
-
             if (!obstacle) {
-                rotation_count = 0;  // Reset counter when no obstacle
                 cmd.linear.x = 0.15;
                 cmd.angular.z = 0.0;
             }
             else if (obstacle && obstacle_left) {
                 cmd.linear.x = 0.0;
-                if (rotation_count < 3) {
-                    cmd.angular.z = 0.2;
-                    rotation_count++;
-                } else {
-                    cmd.angular.z = 0.0;
-                }
+                cmd.angular.z = 0.2;
+
             } 
             else if (obstacle && obstacle_right) {
                 cmd.linear.x = 0.0;
-                if (rotation_count < 3) {
-                    cmd.angular.z = -0.2;
-                    rotation_count++;
-                } else {
-                    cmd.angular.z = 0.0;
-                }
+                cmd.angular.z = -0.2;
             }   
 
             pub_->publish(cmd);
@@ -94,7 +82,6 @@ class GoScan : public rclcpp::Node{
 	    float range_right_array[30];
 	    float range_left_array[30];
         float range_ahead_array[360];
-        int rotation_count = 0;
 
 };
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(wanderbot)
+project(followbot)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -7,25 +7,27 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(geometry_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(image_transport REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
 
-add_executable(go_rot src/go_rot.cpp)
-ament_target_dependencies(go_rot rclcpp std_msgs geometry_msgs)
-
-add_executable(go_scan src/go_scan.cpp)
-ament_target_dependencies(go_scan rclcpp std_msgs geometry_msgs sensor_msgs)
-
-add_executable(go_mission2 src/go_mission2.cpp)
-ament_target_dependencies(go_mission2 rclcpp std_msgs geometry_msgs sensor_msgs)
+add_executable(followbot src/followbot.cpp)
+ament_target_dependencies(followbot rclcpp std_msgs geometry_msgs sensor_msgs image_transport cv_bridge OpenCV)
 
 install(TARGETS
-    go_rot
-    go_scan
-    go_mission2
-    DESTINATION lib/${PROJECT_NAME})
+  followbot
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY
+  launch
+  worlds
+  DESTINATION share/${PROJECT_NAME}
+)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
