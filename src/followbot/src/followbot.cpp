@@ -21,7 +21,7 @@ class FollowBot : public rclcpp::Node {
             pub_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 1);
             timer_ = this->create_wall_timer(100ms, std::bind(&FollowBot::timer_cb, this));
             sub_ = this->create_subscription<sensor_msgs::msg::Image>(
-                "camera/image_raw", 1, std::bind(&FollowBot::img_cb, this, _1)
+                "image_raw", 1, std::bind(&FollowBot::img_cb, this, _1)
             );
         }
 
@@ -29,7 +29,10 @@ class FollowBot : public rclcpp::Node {
         void timer_cb() {
             auto msg = geometry_msgs::msg::Twist();
             msg.linear.x = 0.26;
-            msg.angular.z = -err_ * 0.01;
+            if (turn_true) {
+                msg.linear.x = 0.05;
+                msg.angular.z = err_ * 0.01;
+            }
             pub_->publish(msg);            
         }
         
@@ -47,7 +50,7 @@ class FollowBot : public rclcpp::Node {
             inRange(hsv_img, lower_yellow, upper_yellow, mask);
 
             int search_top = 3 * h / 4;
-            int search_bot = search_top + 20;
+            int search_bot = search_top + 30;
             for(int y = 0; y < h; y++){
                 for (int x = 0; x < w; x++){
                     if(y<search_top) mask.at<uchar>(y, x) = 0;
@@ -64,6 +67,7 @@ class FollowBot : public rclcpp::Node {
             }
 
             imshow("road window", cv_ptr->image);
+            imshow("mask window", mask);
             cv::waitKey(3);
         }
         
@@ -71,7 +75,8 @@ class FollowBot : public rclcpp::Node {
         rclcpp::TimerBase::SharedPtr timer_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_;
         rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr sub_;
-        float err_;      
+        float err_;
+        bool turn_true = false;      
 };
 
 int main(int argc, char *argv[]){
